@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 
 class Todo extends Component {
-  static defaultProps = {
-    todo: 'Test'
-  };
-
   render() {
     return (
       <div>
-        <h1>Todo: {this.props.todo}</h1>
+        <button>Edit</button>
+        <button>X</button>
+        <li>{this.props.task}</li>
       </div>
     );
   }
