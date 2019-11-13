@@ -42,6 +42,7 @@ class TodoList extends Component {
           key={todo.id}
           id={todo.id}
           task={todo.task}
+          completed={todo.completed}
           removeTodo={this.remove}
           updateTodo={this.update}
         />
