@@ -12,6 +12,7 @@ class Todo extends Component {
     this.toggleForm = this.toggleForm.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
+    this.handleToggle = this.handleToggle.bind(this);
   }
 
   handleRemove() {
@@ -32,6 +33,10 @@ class Todo extends Component {
     e.preventDefault();
     this.props.updateTodo(this.props.id, this.state.task);
     this.setState({ isEditing: false });
+  }
+
+  handleToggle(e) {
+    this.props.toggleTodo(this.props.id);
   }
 
   render() {
@@ -55,7 +60,10 @@ class Todo extends Component {
         <div>
           <button onClick={this.toggleForm}>Edit</button>
           <button onClick={this.handleRemove}>X</button>
-          <li className={this.props.completed && "completed"}>
+          <li
+            className={this.props.completed && "completed"}
+            onClick={this.handleToggle}
+          >
             {this.props.task}
           </li>
         </div>
