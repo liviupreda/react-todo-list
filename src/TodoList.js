@@ -65,7 +65,7 @@ class TodoList extends Component {
       <div className="TodoList">
         <h1>
           React Todo List
-          <span>The Worlds's ~1367829612364112th Todo List.</span>
+          <span>The World's ~1367829612364112th Todo List.</span>
         </h1>
         <ul>{todos}</ul>
         <NewTodoForm createTodo={this.create} />
