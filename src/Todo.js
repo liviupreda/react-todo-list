@@ -29,7 +29,8 @@ class Todo extends Component {
 
   handleUpdate(e) {
     e.preventDefault();
-    // Take new task data and pass it up to parent
+    this.props.updateTodo(this.props.id, this.state.task);
+    this.setState({ isEditing: false });
   }
 
   render() {
